@@ -1,0 +1,27 @@
+name:                insert-sorted-intervals
+version:             0.1.0.0
+github:              "wenkokke/misc/insert-sorted-intervals"
+license:             BSD3
+author:              "Wen Kokke"
+maintainer:          "wenkokke@ed.ac.uk"
+copyright:           "2018 Wen Kokke"
+
+description:         Given a sorted and disjoint list of intervals, insert a new interval such that sorted order and disjointness are maintained.
+
+dependencies:
+- base >= 4.7 && < 5
+
+library:
+  source-dirs: src
+
+tests:
+  insert-sorted-intervals-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - insert-sorted-intervals
+    - HUnit
